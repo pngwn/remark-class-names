@@ -5,8 +5,9 @@ const unified = require('unified');
 const markdown = require('remark-parse');
 const remark2rehype = require('remark-rehype');
 const html = require('rehype-stringify');
+const { compile } = require('mdsvex');
 
-const classnames = require('./index')
+const classnames = require('./index');
 
 const processor = unified()
 	.use(markdown, {commonmark: true})
@@ -81,5 +82,21 @@ classes('other stuff', async () => {
 </tr>
 </tbody>
 </table>`)
+})
+
+classes('works with mdsvex', async () => {
+	const md = `hello
+
+hello
+
+hello`;
+
+	const mdsvexed = (await compile(md, {
+		remarkPlugins: [ [classnames, { classMap: { paragraph: 'para' } }] ]
+	})).code;
+
+	assert.equal(mdsvexed, `<p class="para">hello</p>
+<p class="para">hello</p>
+<p class="para">hello</p>`)
 })
 classes.run()

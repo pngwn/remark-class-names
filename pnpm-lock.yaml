@@ -1,9 +1,11 @@
 dependencies:
   unist-util-select: 3.0.1
 devDependencies:
+  mdsvex: 0.8.3_svelte@3.24.1
   rehype-stringify: 8.0.0
   remark-parse: 8.0.3
   remark-rehype: 7.0.0
+  svelte: 3.24.1
   unified: 9.1.0
   uvu: 0.3.2
 lockfileVersion: 5.1
@@ -46,6 +48,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
+  /clipboard/2.0.6:
+    dependencies:
+      good-listener: 1.2.2
+      select: 1.1.2
+      tiny-emitter: 2.1.0
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-g5zbiixBRk/wyKakSwCKd7vQXDjFnAMGHoEyBogG/bw9kTD9GvdAvaoRR1ALcEzt3pVKxZR0pViekPMIS0QyGg==
   /collapse-white-space/1.0.6:
     dev: true
     resolution:
@@ -58,6 +69,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-HYPSb7y/Z7BNDCOrakL4raGO2zltZkbeXyAd6Tg9obzix6QhzxCotdBl6VT0Dv4vZfJGVz3WL/xaEI9Ly3ul0g==
+  /delegate/3.2.0:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
   /dequal/1.0.1:
     dev: true
     engines:
@@ -80,6 +96,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
+  /good-listener/1.2.2:
+    dependencies:
+      delegate: 3.2.0
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
   /hast-util-is-element/1.0.4:
     dev: true
     resolution:
@@ -182,6 +205,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Akl2Vi9y9cSdr19/Dfu58PVwifPXuFt1IrHe7l+Crme1KvgUT+5z+cHLVcQVGCiNTZZcdqjnuv9vPkGsqWytWA==
+  /mdsvex/0.8.3_svelte@3.24.1:
+    dependencies:
+      prismjs: 1.21.0
+      svelte: 3.24.1
+    dev: true
+    peerDependencies:
+      svelte: 3.x
+    resolution:
+      integrity: sha512-Rdfp7WkE+I+KkkdGCgerO2+3pRDYtVNXNEyq1+ORhx0c8Dq7b7AfSXwkcJXpMXr98kKnmCeH29UbbxZdGglIXw==
   /mdurl/1.0.1:
     dev: true
     resolution:
@@ -213,6 +245,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-kkywGpCcRYhqQIchaWqZ875wzpS/bMKhz5HnN3p7wveJTkTtyAB/AlnS0f8DFSqYW1T82t6yEAkEcB+A1I3MbQ==
+  /prismjs/1.21.0:
+    dev: true
+    optionalDependencies:
+      clipboard: 2.0.6
+    resolution:
+      integrity: sha512-uGdSIu1nk3kej2iZsLyDoJ7e9bnPzIgY0naW/HdknGj61zScaprVEVGHrPoXqI+M9sP0NDnTK2jpkvmldpuqDw==
   /property-information/5.5.0:
     dependencies:
       xtend: 4.0.2
@@ -272,6 +310,11 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-m4BctppMvJ60W1dXnHq7jMmFe3hPJZDAH85kQ3ACTo7XZNVUuTItCQ+2HfyaMeV5cKrbw7l4vD/6We3GBxvdJw==
+  /select/1.1.2:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
   /space-separated-tokens/1.1.5:
     dev: true
     resolution:
@@ -290,6 +333,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Lsk3ISA2++eJYqBMPKcr/8eby1I6L0gP0NlxF8Zja6c05yr/yCYyb2c9PwXjd08Ib3If1vn1rbs1H5ZtVuOfvQ==
+  /svelte/3.24.1:
+    dev: true
+    engines:
+      node: '>= 8'
+    resolution:
+      integrity: sha512-OX/IBVUJSFo1rnznXdwf9rv6LReJ3qQ0PwRjj76vfUWyTfbHbR9OXqJBnUrpjyis2dwYcbT2Zm1DFjOOF1ZbbQ==
+  /tiny-emitter/2.1.0:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
   /totalist/1.1.0:
     dev: true
     engines:
@@ -427,9 +481,11 @@ packages:
     resolution:
       integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
 specifiers:
+  mdsvex: ^0.8.3
   rehype-stringify: ^8.0.0
   remark-parse: ^8.0.3
   remark-rehype: ^7.0.0
+  svelte: ^3.24.1
   unified: ^9.1.0
   unist-util-select: ^3.0.1
   uvu: ^0.3.2
