@@ -1,13 +1,17 @@
-const select = require('unist-util-select');
+const {selectAll: select} = require('unist-util-select');
 
-function remark_class_names({ classMap = {} }) {
+function remark_class_names(opts = { classMap: {} }) {
 	function add_class_names(tree) {
-		for (const key in classMap) {
+		for (const key in opts.classMap) {
 			const nodes = select(key, tree);
 
 			for (let i = 0; i < nodes.length; i++) {
-				nodes[i] = ensure_deep_props(nodes[i]);
-				nodes[i].data.hProperties.className.push(classMap[key]);
+				nodes[i] = ensure_deep_props(
+					['data', 'hProperties', 'className'], 
+					[], 
+					nodes[i]
+				);
+				nodes[i].data.hProperties.className.push(opts.classMap[key]);
 			}
 		}
 	}
