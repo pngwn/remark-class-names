@@ -11,6 +11,7 @@
     "plugin",
     "classnames"
   ],
+  "repository": "https://github.com/pngwn/remark-class-names",
   "author": "pngwn <hello@pngwn.io>",
   "license": "MIT",
   "dependencies": {
