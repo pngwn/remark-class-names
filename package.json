@@ -1,7 +1,7 @@
 {
   "name": "remark-class-names",
   "version": "0.0.1",
-  "description": "add classnames to markdown elements",
+  "description": "remark plugin to add classnames to markdown elements",
   "main": "index.js",
   "scripts": {
     "test": "node ./test.js"
